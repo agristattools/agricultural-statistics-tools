@@ -5,7 +5,7 @@
  * Handles public blog listing and single post display using Firebase Firestore
  */
 
-// Firebase configuration - IMPORTANT: Replace with your actual Firebase config
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCqwm2_yUZSiGnRjHULHoPSgh9u_8Xewmk",
   authDomain: "zulqar-nain-statistical-tool.firebaseapp.com",
@@ -277,3 +277,4 @@ if (typeof module !== 'undefined' && module.exports) {
     };
 
 }
+
