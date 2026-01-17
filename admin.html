@@ -1,0 +1,191 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Admin Panel | Zulqar Nain Statistical Tool Blog Management</title>
+    <meta name="description" content="Admin panel for managing blog posts on Zulqar Nain Statistical Tool website.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Firebase SDK -->
+    <!-- IMPORTANT: Replace these with your actual Firebase configuration -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <!-- Admin Container -->
+    <div class="admin-container" id="adminContainer">
+        <!-- Login Screen (shown by default) -->
+        <div class="admin-login" id="loginScreen">
+            <div class="login-container">
+                <div class="login-header">
+                    <h1>Blog Admin Panel</h1>
+                    <p>Zulqar Nain Statistical Tool</p>
+                </div>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large" id="loginBtn">
+                        Login
+                    </button>
+                    
+                    <div id="loginMessage" class="form-message"></div>
+                    
+                    <div class="login-note">
+                        <p><strong>Note:</strong> This is the admin panel for managing blog posts. Only authorized users can access this area.</p>
+                        <p>If you don't have credentials, please contact the website administrator.</p>
+                    </div>
+                </form>
+                
+                <div class="back-to-site">
+                    <a href="index.html" class="btn btn-outline">
+                        ← Back to Main Website
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Admin Dashboard (hidden until login) -->
+        <div class="admin-dashboard" id="dashboard" style="display: none;">
+            <!-- Admin Header -->
+            <header class="admin-header">
+                <div class="container">
+                    <div class="admin-header-content">
+                        <div class="admin-logo">
+                            <h2>Blog Admin Panel</h2>
+                            <p>Zulqar Nain Statistical Tool</p>
+                        </div>
+                        
+                        <div class="admin-actions">
+                            <button id="createPostBtn" class="btn btn-primary">
+                                + Create New Post
+                            </button>
+                            <button id="logoutBtn" class="btn btn-outline">
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Main Admin Content -->
+            <main class="admin-main">
+                <div class="container">
+                    <!-- Posts List -->
+                    <section class="admin-section" id="postsListSection">
+                        <h2 class="admin-section-title">Existing Blog Posts</h2>
+                        <div class="posts-list" id="postsList">
+                            <!-- Posts will be loaded here -->
+                            <div class="loading">
+                                <div class="loading-spinner"></div>
+                                <p>Loading posts...</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Create/Edit Post Form -->
+                    <section class="admin-section" id="postFormSection" style="display: none;">
+                        <h2 class="admin-section-title" id="formTitle">Create New Post</h2>
+                        
+                        <form id="postForm" class="post-form">
+                            <div class="form-group">
+                                <label for="postTitle">Title *</label>
+                                <input type="text" id="postTitle" name="title" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="postSlug">Slug (URL-friendly version)</label>
+                                <input type="text" id="postSlug" name="slug">
+                                <small>Leave empty to auto-generate from title</small>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="postAuthor">Author *</label>
+                                    <input type="text" id="postAuthor" name="author" value="Zulqar Nain" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="postDate">Publish Date *</label>
+                                    <input type="date" id="postDate" name="date" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="postTags">Categories / Tags</label>
+                                <input type="text" id="postTags" name="tags" placeholder="ANOVA, Statistics, Tutorial">
+                                <small>Separate with commas</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="postThumbnail">Thumbnail Image URL</label>
+                                <input type="url" id="postThumbnail" name="thumbnail" placeholder="https://example.com/image.jpg">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="postContent">Content *</label>
+                                <textarea id="postContent" name="content" rows="15" required></textarea>
+                                <small>HTML is supported. Use &lt;p&gt; for paragraphs, &lt;h2&gt; for headings, etc.</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="postExcerpt">Short Excerpt (Optional)</label>
+                                <textarea id="postExcerpt" name="excerpt" rows="3"></textarea>
+                                <small>Brief summary for blog listing (auto-generated if empty)</small>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary" id="savePostBtn">
+                                    Save Post
+                                </button>
+                                <button type="button" id="cancelEditBtn" class="btn btn-outline">
+                                    Cancel
+                                </button>
+                            </div>
+                            
+                            <div id="postFormMessage" class="form-message"></div>
+                        </form>
+                    </section>
+                </div>
+            </main>
+            
+            <!-- Admin Footer -->
+            <footer class="admin-footer">
+                <div class="container">
+                    <p>© <span id="adminCurrentYear"></span> Zulqar Nain Statistical Tool Admin Panel</p>
+                    <p class="admin-footer-note">
+                        <strong>Note:</strong> Make sure Firebase security rules are properly configured to restrict unauthorized access.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/admin.js"></script>
+    <script>
+        // Set current year
+        document.getElementById('adminCurrentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

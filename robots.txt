@@ -1,0 +1,25 @@
+# robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /assets/js/admin.js
+
+Sitemap: https://www.zulqarnainstatisticaltool.com/sitemap.xml
+
+# Crawl-delay: 10  # Uncomment if needed to limit crawl rate
+
+# Additional rules for specific bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Note: For production, update the domain in the Sitemap URL
+# The domain placeholder will be replaced during deployment

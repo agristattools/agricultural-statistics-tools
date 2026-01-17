@@ -1,0 +1,169 @@
+<!-- blogs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Blogs & Learning Resources | Zulqar Nain Statistical Tool</title>
+    <meta name="description" content="Step-by-step guides, tutorials, and case studies on ANOVA, multivariate analysis, and agricultural statistics using R and Shiny-powered tools.">
+    <meta name="keywords" content="statistics blog, ANOVA tutorial, multivariate analysis guide, R Shiny tutorials, agricultural statistics blog">
+    <meta name="author" content="AgriStatTools">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blogs & Learning Resources - Statistical Analysis">
+    <meta property="og:description" content="Learn statistical analysis techniques with our comprehensive tutorials and guides.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zulqarnainstatisticaltool.com/blogs.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Statistical Analysis Blog">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.zulqarnainstatisticaltool.com/blogs.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Firebase SDK -->
+    <!-- IMPORTANT: Replace these with your actual Firebase configuration -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1 class="logo-title">Zulqar Nain Statistical Tool</h1>
+                    <p class="logo-subtitle">by AgriStatTools</p>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="free-trial.html" class="nav-link">Free Trial Analysis</a></li>
+                        <li class="nav-item"><a href="anova-analysis.html" class="nav-link">ANOVA Analysis</a></li>
+                        <li class="nav-item"><a href="multiple-analysis.html" class="nav-link">Multiple Analysis</a></li>
+                        <li class="nav-item active"><a href="blogs.html" class="nav-link">Blogs</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item">
+                            <a href="free-trial.html" class="btn btn-primary btn-small">Start Free Trial</a>
+                        </li>
+                    </ul>
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-small">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Blogs & Learning Resources</h1>
+                <p class="hero-description">
+                    Read step‑by‑step guides, tutorials, and case studies on ANOVA, multivariate analysis, and agricultural statistics using R and Shiny‑powered tools.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Listing -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-listing" id="blogListing">
+                <!-- Blog posts will be loaded dynamically here -->
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading blog posts...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Link (hidden from regular users) -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="admin-link">
+                <p>Are you the admin? <a href="admin.html">Go to Admin Panel</a> to manage blog posts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Zulqar Nain Statistical Tool</h3>
+                    <p class="footer-description">Advanced Online Statistical Analysis Platform by AgriStatTools.</p>
+                    <p class="footer-note">All analysis tools are powered by R and Shiny.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="free-trial.html">Free Trial Analysis</a></li>
+                        <li><a href="anova-analysis.html">ANOVA Analysis</a></li>
+                        <li><a href="multiple-analysis.html">Multiple Analysis</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-subtitle">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><strong>WhatsApp:</strong> +92 346 5375149</li>
+                        <li><strong>Email:</strong> zulqarnainm656@gmail.com</li>
+                        <li><strong>Support:</strong> Available 24/7</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-subtitle">Payment Available</h4>
+                    <p>JazzCash & Sadapay (International)</p>
+                    <p>Custom packages available</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© <span id="currentYear"></span> Zulqar Nain Statistical Tool by AgriStatTools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog.js"></script>
+    <script>
+        // Set current year in copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Initialize blog listing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Firebase configuration will be initialized in blog.js
+            // Blog posts will be loaded by blog.js
+        });
+    </script>
+</body>
+</html>
