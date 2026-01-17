@@ -7,12 +7,13 @@
 
 // Firebase configuration - IMPORTANT: Replace with your actual Firebase config
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY_HERE",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCqwm2_yUZSiGnRjHULHoPSgh9u_8Xewmk",
+  authDomain: "zulqar-nain-statistical-tool.firebaseapp.com",
+  projectId: "zulqar-nain-statistical-tool",
+  storageBucket: "zulqar-nain-statistical-tool.firebasestorage.app",
+  messagingSenderId: "459867311033",
+  appId: "1:459867311033:web:89f7c968bd6d7b45ab0468",
+  measurementId: "G-G08GNXRN5J"
 };
 
 // Initialize Firebase (compatibility version for older SDK)
@@ -274,4 +275,5 @@ if (typeof module !== 'undefined' && module.exports) {
         formatDate,
         updatePageMetadata
     };
+
 }
