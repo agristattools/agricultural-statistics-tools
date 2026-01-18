@@ -16,7 +16,7 @@
     width: 500%;
     height: 100%;
     display: flex;
-    animation: slide 35s infinite linear;
+    animation: slide 6s infinite linear;
 }
 
 .slide {
@@ -65,6 +65,6 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .slider-container {
-        animation-duration: 40s;
+        animation-duration: 8s;
     }
 }
