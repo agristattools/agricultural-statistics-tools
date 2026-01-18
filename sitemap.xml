@@ -1,57 +1,52 @@
-<!-- sitemap.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <!-- Home Page -->
     <url>
-        <loc>https://www.zulqarnainstatisticaltool.com/</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://agristattools.github.io/agricultural-statistics-tools/</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     
     <!-- Free Trial Analysis -->
     <url>
-        <loc>https://www.zulqarnainstatisticaltool.com/free-trial.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://agristattools.github.io/agricultural-statistics-tools/free-trial.html</loc>
+        <lastmod>2024-12-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- ANOVA Analysis -->
     <url>
-        <loc>https://www.zulqarnainstatisticaltool.com/anova-analysis.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://agristattools.github.io/agricultural-statistics-tools/anova-analysis.html</loc>
+        <lastmod>2024-12-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Multiple Analysis -->
     <url>
-        <loc>https://www.zulqarnainstatisticaltool.com/multiple-analysis.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://agristattools.github.io/agricultural-statistics-tools/multiple-analysis.html</loc>
+        <lastmod>2024-12-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Blogs -->
     <url>
-        <loc>https://www.zulqarnainstatisticaltool.com/blogs.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://agristattools.github.io/agricultural-statistics-tools/blogs.html</loc>
+        <lastmod>2024-12-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Contact Us -->
     <url>
-        <loc>https://www.zulqarnainstatisticaltool.com/contact.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://agristattools.github.io/agricultural-statistics-tools/contact.html</loc>
+        <lastmod>2024-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
-    <!-- Blog posts will be dynamically added here when created -->
-    <!-- The admin should update this sitemap periodically with new blog post URLs -->
     
 </urlset>
