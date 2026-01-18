@@ -1336,3 +1336,480 @@ a:hover {
         color: black !important;
     }
 }
+
+/* ==========================================================================
+   Page-Specific Fixes and Improvements
+   ========================================================================== */
+
+/* ==========================================================================
+   Hero Title Fixes for All Pages
+   ========================================================================== */
+.hero-small .hero-title {
+    color: var(--secondary-color) !important;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.hero-small .hero-description {
+    color: var(--text-color) !important;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-small {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hero-small .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   Shiny App Embed Fixes
+   ========================================================================== */
+.shiny-embed {
+    width: 100%;
+    margin: 0 auto 3rem;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    background: white;
+}
+
+.shiny-embed iframe {
+    width: 100%;
+    height: 1000px !important; /* Increased height */
+    min-height: 800px;
+    border: none;
+    display: block;
+}
+
+/* Shiny App Responsive Heights */
+.tool-section .shiny-embed iframe {
+    height: 850px !important;
+}
+
+/* Full-screen Shiny App Option */
+.shiny-embed.fullscreen iframe {
+    height: 1200px !important;
+}
+
+/* Shiny App Container */
+.tool-section {
+    margin-bottom: 4rem;
+}
+
+.tool-section:last-child {
+    margin-bottom: 2rem;
+}
+
+/* Shiny App Instructions */
+.shiny-instructions {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.shiny-instructions h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.shiny-instructions ul {
+    margin: 0.5rem 0 0 1.5rem;
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+   Contact Form Fixes
+   ========================================================================== */
+.contact-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.8rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+    background: white;
+}
+
+.contact-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ==========================================================================
+   Blog Page Fixes
+   ========================================================================== */
+.blog-listing {
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-thumbnail {
+    height: 220px;
+    overflow: hidden;
+}
+
+.blog-card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-thumbnail img {
+    transform: scale(1.05);
+}
+
+.blog-card-content {
+    padding: 1.8rem;
+}
+
+.blog-card-title {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.blog-card-meta {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.blog-card-excerpt {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+/* ==========================================================================
+   Single Blog Post
+   ========================================================================== */
+.blog-post-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.blog-post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.blog-post-title {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.blog-post-meta {
+    color: var(--text-light);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-thumbnail {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.blog-post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.blog-post-content h2 {
+    color: var(--primary-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.blog-post-content h3 {
+    color: var(--secondary-color);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.blog-post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+/* ==========================================================================
+   Section Title Improvements
+   ========================================================================== */
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   Button Improvements
+   ========================================================================== */
+.btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsive Fixes
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Hero titles on mobile */
+    .hero-small .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-small .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    /* Shiny app on mobile */
+    .shiny-embed iframe {
+        height: 700px !important;
+        min-height: 600px;
+    }
+    
+    .tool-section .shiny-embed iframe {
+        height: 650px !important;
+    }
+    
+    /* Contact form on mobile */
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    /* Blog post on mobile */
+    .blog-post {
+        padding: 1.5rem;
+    }
+    
+    .blog-post-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Contact grid */
+    .contact-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-small {
+        padding: 3.5rem 0;
+    }
+    
+    .hero-small .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .shiny-embed iframe {
+        height: 600px !important;
+    }
+    
+    .blog-card-thumbnail {
+        height: 180px;
+    }
+}
+
+/* ==========================================================================
+   Pricing Table Improvements
+   ========================================================================== */
+.pricing-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-features {
+    flex-grow: 1;
+}
+
+/* ==========================================================================
+   Loading States
+   ========================================================================== */
+.loading {
+    text-align: center;
+    padding: 4rem;
+    color: var(--text-light);
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #f0f0f0;
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+.text-center {
+    text-align: center;
+}
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+/* ==========================================================================
+   Form Message Styles
+   ========================================================================== */
+.form-message {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
