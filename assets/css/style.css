@@ -1814,3 +1814,86 @@ a:hover {
     border: 1px solid #f5c6cb;
 }
 
+
+
+/* ==========================================================================
+   Shiny App Size Fix and SEO Improvements
+   ========================================================================== */
+
+/* Make Shiny apps larger */
+.shiny-embed {
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.shiny-embed iframe {
+    width: 100% !important;
+    height: 900px !important;
+    min-height: 800px;
+    border: none;
+    display: block;
+}
+
+.shiny-instructions {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.95rem;
+}
+
+.shiny-instructions h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.shiny-instructions ul {
+    margin: 0.5rem 0 0 1.5rem;
+    color: var(--text-light);
+}
+
+.shiny-instructions li {
+    margin-bottom: 0.3rem;
+}
+
+/* Fix hero title colors on all pages */
+.hero-small .hero-title {
+    color: var(--secondary-color) !important;
+}
+
+.hero-small .hero-description {
+    color: var(--text-color) !important;
+}
+
+.hero-small {
+    background: #f8f9fa;
+}
+
+/* Improve contact form */
+.contact-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
