@@ -124,8 +124,37 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Replace the entire Hero Section (lines ~116-148) -->
+<section class="hero">
+    <div class="hero-slider">
+        <!-- Image Slider -->
+        <div class="slider-container">
+            <!-- Slide 1: Statistical Analysis -->
+            <div class="slide">
+                <img src="assets/img/slider/statistical-analysis.jpg" alt="Statistical Analysis Visualization" class="slide-image" loading="lazy">
+            </div>
+            <!-- Slide 2: Data Science -->
+            <div class="slide">
+                <img src="assets/img/slider/data-science.jpg" alt="Data Science and Research" class="slide-image" loading="lazy">
+            </div>
+            <!-- Slide 3: Agricultural Research -->
+            <div class="slide">
+                <img src="assets/img/slider/agricultural-research.jpg" alt="Agricultural Research Field" class="slide-image" loading="lazy">
+            </div>
+            <!-- Slide 4: Scientific Visualization -->
+            <div class="slide">
+                <img src="assets/img/slider/scientific-visualization.jpg" alt="Scientific Data Visualization" class="slide-image" loading="lazy">
+            </div>
+            <!-- Slide 5: Research Collaboration -->
+            <div class="slide">
+                <img src="assets/img/slider/research-collaboration.jpg" alt="Research Team Collaboration" class="slide-image" loading="lazy">
+            </div>
+        </div>
+        
+        <!-- Black Overlay for Readability -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero Content (unchanged but now on top of overlay) -->
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Zulqar Nain Statistical Tool</h1>
@@ -134,14 +163,15 @@
                     A fully automated, R-based online statistical analysis platform for ANOVA, multivariate analysis, and high-resolution scientific visualization with no coding required.
                 </p>
                 <div class="hero-buttons">
-                    <a href="https://agristattools.github.io/agricultural-statistics-tools/free-trial.html" target=" _blank" class="btn btn-secondary btn-large">Start Free Trial</a>
+                    <a href="https://agristattools.github.io/agricultural-statistics-tools/free-trial.html" target="_blank" class="btn btn-secondary btn-large">Start Free Trial</a>
                     <a href="https://agristattools.github.io/agricultural-statistics-tools/anova-analysis.html" target="_blank" class="btn btn-secondary btn-large">Launch ANOVA Tool</a>
                     <a href="https://agristattools.github.io/agricultural-statistics-tools/multiple-analysis.html" target="_blank" class="btn btn-secondary btn-large">Launch Multiple Analysis Tool</a>
                 </div>
                 <p class="hero-trust">Trusted by plant breeders, researchers, and statisticians for R‑identical, publication‑ready results.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Platform -->
     <section class="section section-light">
@@ -561,45 +591,63 @@
         </div>
     </section>
 
-    <!-- Members Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Members</h2>
-            <div class="members-grid">
-                <div class="member-card">
-                    <div class="member-image-container">
-                        <img src="assets/img/members/tahir-munir-butt.jpg" alt="DR. TAHIR MUNIR BUTT" class="member-image" loading="lazy">
-                    </div>
-                    <h4 class="member-name">DR. TAHIR MUNIR BUTT</h4>
-                    <p class="member-designation">Principal, UAF Constituent College, Depalpur, Okara</p>
+    <!-- Members Section - Updated with 6 members -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Expert Team Members</h2>
+        <div class="members-grid">
+            <div class="member-card">
+                <div class="member-image-container">
+                    <img src="assets/img/members/tahir-munir-butt.jpg" alt="DR. TAHIR MUNIR BUTT" class="member-image" loading="lazy">
                 </div>
-                
-                <div class="member-card">
-                    <div class="member-image-container">
-                        <img src="assets/img/members/sidra-iqbal.jpg" alt="DR. SIDRA IQBAL" class="member-image" loading="lazy">
-                    </div>
-                    <h4 class="member-name">DR. SIDRA IQBAL</h4>
-                    <p class="member-designation">Assistant Professor & HOD – PBG, UAF Constituent College, Depalpur, Okara</p>
+                <h4 class="member-name">DR. TAHIR MUNIR BUTT</h4>
+                <p class="member-designation">Principal, UAF Constituent College, Depalpur, Okara</p>
+            </div>
+            
+            <div class="member-card">
+                <div class="member-image-container">
+                    <img src="assets/img/members/sidra-iqbal.jpg" alt="DR. SIDRA IQBAL" class="member-image" loading="lazy">
                 </div>
-                
-                <div class="member-card">
-                    <div class="member-image-container">
-                        <img src="assets/img/members/haris-khurshid.jpg" alt="DR. HARIS KHURSHID" class="member-image" loading="lazy">
-                    </div>
-                    <h4 class="member-name">DR. HARIS KHURSHID</h4>
-                    <p class="member-designation">SSO, National Agricultural Research Centre (NARC), Islamabad</p>
+                <h4 class="member-name">DR. SIDRA IQBAL</h4>
+                <p class="member-designation">Assistant Professor & HOD – PBG, UAF Constituent College, Depalpur, Okara</p>
+            </div>
+            
+            <div class="member-card">
+                <div class="member-image-container">
+                    <img src="assets/img/members/haris-khurshid.jpg" alt="DR. HARIS KHURSHID" class="member-image" loading="lazy">
                 </div>
-                
-                <div class="member-card">
-                    <div class="member-image-container">
-                        <img src="assets/img/members/m-rizwan-shafiq.jpg" alt="DR. M. RIZWAN SHAFIQ" class="member-image" loading="lazy">
-                    </div>
-                    <h4 class="member-name">DR. M. RIZWAN SHAFIQ</h4>
-                    <p class="member-designation">Lecturer – PBG, UAF Constituent College, Depalpur, Okara</p>
+                <h4 class="member-name">DR. HARIS KHURSHID</h4>
+                <p class="member-designation">SSO, National Agricultural Research Centre (NARC), Islamabad</p>
+            </div>
+            
+            <div class="member-card">
+                <div class="member-image-container">
+                    <img src="assets/img/members/m-rizwan-shafiq.jpg" alt="DR. M. RIZWAN SHAFIQ" class="member-image" loading="lazy">
                 </div>
+                <h4 class="member-name">DR. M. RIZWAN SHAFIQ</h4>
+                <p class="member-designation">Lecturer – PBG, UAF Constituent College, Depalpur, Okara</p>
+            </div>
+            
+            <!-- New Member 1 -->
+            <div class="member-card">
+                <div class="member-image-container">
+                    <img src="assets/img/members/javeria-ramzan.jpg" alt="DR. JAVERIA RAMZAN" class="member-image" loading="lazy">
+                </div>
+                <h4 class="member-name">DR. JAVERIA RAMZAN</h4>
+                <p class="member-designation">Teacher - PBG, UAF Constituent College, Depalpur, Okara</p>
+            </div>
+            
+            <!-- New Member 2 -->
+            <div class="member-card">
+                <div class="member-image-container">
+                    <img src="assets/img/members/noshi-parveen.jpg" alt="DR. NOSHI PARVEEN" class="member-image" loading="lazy">
+                </div>
+                <h4 class="member-name">DR. NOSHI PARVEEN</h4>
+                <p class="member-designation">Teacher - PBG, UAF Constituent College, Depalpur, Okara</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -654,4 +702,5 @@
 </body>
 
 </html>
+
 
