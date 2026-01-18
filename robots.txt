@@ -6,6 +6,7 @@ Disallow: /assets/js/admin.js
 
 Sitemap: https://agristattools.github.io/agricultural-statistics-tools/sitemap.xml
 
+
 # Crawl-delay: 10  # Uncomment if needed to limit crawl rate
 
 # Additional rules for specific bots
@@ -24,3 +25,4 @@ Disallow: /
 # Note: For production, update the domain in the Sitemap URL
 
 # The domain placeholder will be replaced during deployment
+
