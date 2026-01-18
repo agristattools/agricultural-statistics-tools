@@ -1,4 +1,5 @@
 # robots.txt
+Host: agristattools.github.io
 User-agent: *
 Allow: /
 Disallow: /admin.html
@@ -25,4 +26,5 @@ Disallow: /
 # Note: For production, update the domain in the Sitemap URL
 
 # The domain placeholder will be replaced during deployment
+
 
