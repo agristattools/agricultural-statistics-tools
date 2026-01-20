@@ -37,6 +37,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Ads CSS -->
+<link rel="stylesheet" href="assets/css/ads.css">
     
     <!-- Firebase SDK -->
     <!-- IMPORTANT: Replace these with your actual Firebase configuration -->
@@ -94,13 +97,19 @@
                 Read step‑by‑step guides, tutorials, and case studies on ANOVA, multivariate analysis, and agricultural statistics using R and Shiny‑powered tools.
             </p>
         </div>
-    </div>
+        </div>
 </section>
 
-    <!-- Blog Listing -->
-    <section class="section">
-        <div class="container">
-            <div class="blog-listing" id="blogListing">
+<!-- Native Ad after title -->
+<div class="ad-container native-ad-container">
+    <span class="ad-label">Advertisement</span>
+    <!-- Native Banner will be injected here -->
+</div>
+
+<!-- Blog Listing -->
+<section class="section">
+    <div class="container">
+        <div class="blog-listing" id="blogListing">
                 <!-- Blog posts will be loaded dynamically here -->
                 <div class="loading">
                     <div class="loading-spinner"></div>
@@ -110,6 +119,13 @@
         </div>
     </section>
 
+<!-- Mid-content Ad -->
+<div class="ad-divider"></div>
+<div class="ad-container native-ad-container">
+    <span class="ad-label">Advertisement</span>
+    <!-- Native Banner will be injected here -->
+</div>
+    
     <!-- Admin Link (hidden from regular users) -->
     <section class="section section-light">
         <div class="container">
@@ -117,10 +133,16 @@
                 <p>Are you the admin? <a href="admin.html">Go to Admin Panel</a> to manage blog posts.</p>
             </div>
         </div>
-    </section>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
+<!-- Mobile Banner -->
+<div class="mobile-ad-container" id="mobile-banner-ad">
+    <span class="ad-label">Advertisement</span>
+    <!-- 320x50 Banner will be injected here on mobile -->
+</div>
+
+<!-- Footer -->
+<footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
@@ -166,6 +188,10 @@
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/blog.js"></script>
+
+        <!-- Ads Manager -->
+    <script src="assets/js/ads-manager.js"></script>
+    
     <script>
         // Set current year in copyright
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -179,6 +205,7 @@
 </body>
 
 </html>
+
 
 
 
