@@ -1,0 +1,135 @@
+/* ==========================================================================
+   Adsterra Ad Styles
+   Professional, non-intrusive ad styling
+   ========================================================================== */
+
+/* Ad Containers */
+.ad-container {
+    margin: 2rem auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.native-ad-container {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 728px;
+}
+
+.mobile-ad-container {
+    display: none;
+}
+
+.banner-ad-container {
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+/* Spacing and Layout */
+.ad-spacing {
+    margin: 2rem 0;
+}
+
+.ad-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--medium-gray), transparent);
+    margin: 2.5rem auto;
+    width: 80%;
+}
+
+/* Ad Labels (optional, for transparency) */
+.ad-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .native-ad-container {
+        padding: 1rem;
+        margin: 1.5rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-ad-container {
+        display: block;
+        margin: 1rem auto;
+        position: sticky;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        padding: 0.5rem;
+        border-top: 1px solid #e9ecef;
+    }
+    
+    .native-ad-container {
+        padding: 0.75rem;
+        margin: 1rem auto;
+    }
+    
+    .banner-ad-container iframe {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .ad-container {
+        margin: 1rem auto;
+    }
+    
+    .native-ad-container {
+        padding: 0.5rem;
+    }
+}
+
+/* Ensure ads don't interfere with content */
+.shiny-embed + .ad-container {
+    margin-top: 3rem;
+}
+
+.form-section + .ad-container,
+.results-section + .ad-container {
+    margin-top: 2.5rem;
+}
+
+/* Prevent ad overflow */
+#container-e057183590c510b499eb5de3f9c43f9d,
+.native-ad-container > div,
+.ad-container iframe {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 6px !important;
+}
+
+/* Loading state */
+.ad-loading {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 6px;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
