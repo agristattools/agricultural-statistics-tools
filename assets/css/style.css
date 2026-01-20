@@ -1967,3 +1967,34 @@ a:hover {
 }
 
 
+/* ===== LOGO STYLES ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-image-container {
+    width: 60px;
+    height: 60px;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .logo-image-container {
+        width: 50px;
+        height: 50px;
+    }
+}
+
