@@ -47,6 +47,9 @@
 
 <!-- Slider CSS -->
 <link rel="stylesheet" href="assets/css/slider.css">
+
+    <!-- Ads CSS -->
+    <link rel="stylesheet" href="assets/css/ads.css">
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -192,8 +195,16 @@
     </div>
 </section>
 
-    <!-- About Platform -->
-    <section class="section section-light">
+<!-- Native Ad -->
+<div class="ad-spacing">
+    <div class="ad-container native-ad-container">
+        <span class="ad-label">Advertisement</span>
+        <!-- Native Banner will be injected here -->
+    </div>
+</div>
+
+<!-- About Platform -->
+<section class="section section-light">
         <div class="container">
             <h2 class="section-title">About the Platform</h2>
             <div class="about-content">
@@ -666,7 +677,14 @@
             </div>
         </div>
     </div>
-</section>
+    </section>
+
+    <!-- Footer Ad -->
+    <div class="ad-divider"></div>
+    <div class="ad-container native-ad-container">
+        <span class="ad-label">Advertisement</span>
+        <!-- Native Banner will be injected here -->
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -756,6 +774,9 @@
 <!-- Slider JavaScript -->
 <script src="assets/js/slider.js"></script>
 
+    <!-- Ads Manager -->
+    <script src="assets/js/ads-manager.js"></script>
+
 <script>
         // Set current year in copyright
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -763,6 +784,7 @@
 
 </body>
 </html>
+
 
 
 
