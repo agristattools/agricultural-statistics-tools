@@ -2002,7 +2002,7 @@ a:hover {
 
 /* FIX 1: Smaller banner headers */
 .hero-small {
-    height: 300px !important;
+    height: 150px !important;
     background: linear-gradient(135deg, #2E8B57 0%, #1F6B43 100%) !important;
     padding: 40px 0;
 }
@@ -2029,3 +2029,4 @@ html {
 .shiny-embed {
     scroll-behavior: auto !important;
 }
+
