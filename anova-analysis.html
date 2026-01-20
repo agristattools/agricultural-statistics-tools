@@ -37,6 +37,10 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Ads CSS -->
+<link rel="stylesheet" href="assets/css/ads.css">
+    
 </head>
 <body>
     <!-- Header -->
@@ -107,12 +111,21 @@
                         Open ANOVA Analysis Tool in a new tab
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
+           </div>
+      </div>
+</section>
 
-    <!-- ANOVA Packages -->
-    <section class="section section-light">
+<!-- Ad after analysis results -->
+<div id="results-ad-container">
+    <div class="ad-divider"></div>
+    <div class="ad-container native-ad-container">
+        <span class="ad-label">Advertisement</span>
+        <!-- Native Banner will be injected here -->
+    </div>
+</div>
+
+<!-- ANOVA Packages -->
+<section class="section section-light">
         <div class="container">
             <h2 class="section-title">ANOVA Analysis Packages</h2>
             <div class="pricing-grid">
@@ -385,15 +398,31 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+        <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/ads-manager.js"></script>
     <script>
         // Set current year in copyright
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Show ad only when results are generated
+        document.addEventListener('DOMContentLoaded', function() {
+            const adContainer = document.getElementById('results-ad-container');
+            if (adContainer) {
+                // Hide initially
+                adContainer.style.display = 'none';
+                
+                // Show after 10 seconds (when user might have results)
+                setTimeout(() => {
+                    adContainer.style.display = 'block';
+                }, 10000);
+            }
+        });
     </script>
 </body>
 
 </html>
+
 
 
 
