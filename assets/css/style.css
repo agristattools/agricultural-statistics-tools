@@ -2069,3 +2069,34 @@ a:hover {
         padding: 0 15px;
     }
 }
+
+
+
+
+
+/* ===== FIX ANCHOR LINK JUMPING ===== */
+/* This prevents page from jumping when clicking links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust based on your header height */
+}
+
+/* Fix for shiny app iframe links */
+.shiny-embed iframe {
+    scroll-behavior: auto !important;
+}
+
+/* Prevent any element from forcing scroll to top */
+*[id] {
+    scroll-margin-top: 100px; /* Space for fixed header */
+}
+
+/* Specifically for shiny apps */
+iframe html, iframe body {
+    scroll-behavior: auto !important;
+}
+
+/* For any internal links that might cause jumping */
+a[href^="#"] {
+    scroll-behavior: smooth;
+}
