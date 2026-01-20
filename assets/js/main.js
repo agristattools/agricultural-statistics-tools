@@ -11,9 +11,27 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQAccordion();
     initCurrentYear();
     initStickyHeader();
+    initSmoothScroll();
     
     // Initialize analytics placeholder (replace with actual analytics code)
     initAnalyticsPlaceholder();
+    
+    // Fix clicking in shiny apps
+    fixIframeClickScrolling();
+    
+    // Handle hash URLs on page load
+    if (window.location.hash) {
+        setTimeout(() => {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight,
+                    behavior: 'auto'
+                });
+            }
+        }, 100);
+    }
 });
 
 /**
@@ -196,6 +214,60 @@ function initSmoothScroll() {
 }
 
 /**
+ * Fix clicking in shiny apps and other iframes from scrolling to top
+ */
+function fixIframeClickScrolling() {
+    // Prevent iframe clicks from affecting parent page
+    const iframes = document.querySelectorAll('iframe');
+    
+    iframes.forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                iframeDoc.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }, true);
+            } catch (e) {
+                console.log('Iframe loaded');
+            }
+        });
+    });
+    
+    // Fix anchor links within the page
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href === '#' || href === '#!') {
+                e.preventDefault();
+                return;
+            }
+            
+            if (!this.closest('.shiny-embed') && !this.closest('iframe')) {
+                const targetElement = document.querySelector(href);
+                
+                if (targetElement) {
+                    e.preventDefault();
+                    
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (history.pushState) {
+                        history.pushState(null, null, href);
+                    }
+                }
+            }
+        });
+    });
+}
+
+/**
  * Initialize analytics placeholder
  * Replace with actual analytics code when needed
  */
@@ -315,6 +387,7 @@ if (typeof module !== 'undefined' && module.exports) {
         validateForm,
         isValidEmail,
         debounce,
-        throttle
+        throttle,
+        fixIframeClickScrolling
     };
 }
