@@ -1833,7 +1833,7 @@ a:hover {
 .shiny-embed iframe {
     width: 100% !important;
     height: 2500px !important;
-    min-height: 800px;
+    min-height: 2400px;
     border: none;
     display: block;
 }
@@ -2100,4 +2100,5 @@ iframe html, iframe body {
 a[href^="#"] {
     scroll-behavior: smooth;
 }
+
 
